@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      body {
+        background: #000;
+        color: white;
+        font-size: 5rem;
+        display: grid;
+        height: 100vh;
+        place-items: center;
+      }
+      #clock {
+        padding: 1rem;
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+
+    <script>
+      function a() {
+        var currentTime = new Date();
+        time = `${currentTime.getHours()} :  ${currentTime.getMinutes()} : ${currentTime.getSeconds()}`;
+        document.getElementById("clock").innerHTML = time;
+      }
+
+      setInterval(a, 1000);
+    </script>
+  </body>
+</html>
